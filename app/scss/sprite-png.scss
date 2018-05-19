@@ -1,4 +1,16 @@
 
+%icon-man {
+  background-image: url(../images/sprite.png);
+  background-position: -21px -19px;
+  width: 13px;
+  height: 16px;
+}
+%icon-phone {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -19px;
+  width: 16px;
+  height: 16px;
+}
 %icon-title-wave {
   background-image: url(../images/sprite.png);
   background-position: 0px 0px;
@@ -7,8 +19,16 @@
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  %icon-man {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 104px 35px;
+  }
+  %icon-phone {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 104px 35px;
+  }
   %icon-title-wave {
     background-image: url(../images/sprite@2x.png);
-    background-size: 104px 14px;
+    background-size: 104px 35px;
   }
 }
