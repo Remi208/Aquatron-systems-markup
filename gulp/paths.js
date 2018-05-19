@@ -1,0 +1,33 @@
+export default {
+  baseSrc: './app',
+  baseDist: './dist',
+  src: {
+    styles: './app/scss',
+    components: './app/components',
+    pngsprite: './app/png-sprite',
+    svgsprite: './app/svg-sprite',
+    images: './app/images',
+    svg: './app/svg',
+    scripts: './app/scripts',
+    static: './app/data',
+    includes: './app/_includes',
+    fonts: './app/fonts',
+    API: './app/API'
+  },
+
+  dist: {
+    components: './dist/components',
+    styles: './dist/css',
+    images: './dist/images',
+    optimizedImg: './dist/images-optimized',
+    scripts: './dist/js',
+    static: './dist/data',
+    optimizedData: './dist/data-optimized',
+    fonts: './dist/fonts',
+    API: './dist/API'
+  },
+  inline: {
+    styles: '/css',
+    images: '/images'
+  }
+};
