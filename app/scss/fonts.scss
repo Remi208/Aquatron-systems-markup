@@ -11,3 +11,25 @@
     font-style: $fontstyle;
   }
 }
+
+@font-face{
+  font-family:'Circe';
+  src:url('../fonts/circe-regular.eot');
+  src:local('☺'), url('../fonts/circe-regular.woff') format('woff'), url('../fonts/circe-regular.svg') format('svg');
+  font-weight:400;
+  font-style:normal;
+}
+@font-face{
+  font-family:'Circe';
+  src:url('../fonts/circe-bold.eot');
+  src:local('☺'), url('../fonts/circe-bold.woff') format('woff'), url('../fonts/circe-bold.svg') format('svg');
+  font-weight:700;
+  font-style:normal;
+}
+@font-face{
+  font-family:'Circe';
+  src:url('../fonts/circe-light.eot');
+  src:local('☺'), url('../fonts/circe-light.woff') format('woff'), url('../fonts/circe-light.svg') format('svg');
+  font-weight:300;
+  font-style:normal;
+}

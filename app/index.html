@@ -3,7 +3,86 @@
 {% include 'head.html' %}
 
 <body>
-
+  <div class="wrapper">
+      {% include 'header.html' %}
+      <div class="main">
+        <div class="block-1">
+          <div class="container">
+            <div class="block-1__content">
+              <div class="block-1__info">
+                <div class="title">Постройте<br>эко-бассейн без хлора,</div>
+                <div class="subtitle">который сохраняет<br>ваше здоровье</div>
+                <div class="to-calc">
+                  <div class="text">Рассчитайте стоимость басейна<br>с помощью удобного калькулятора</div>
+                  <a href="#" class="btn btn-to-calc">Рассчитать стоимость бассасейна</a>
+                  <div class="mouse-decor">
+                    <div class="ico">
+                      <img src="data/mouse-ico.png" alt="mouse">
+                    </div>
+                    <div class="text">Листай вниз</div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-1__absolute-elem">
+                <div class="main-image">
+                  <img src="data/pool-img-1.png" alt="pool">
+                </div>
+                <div class="decor-elem decor-elem-1">
+                  <div class="text">Не вызывает<br>коррозии металла</div>
+                  <div class="arrow">
+                    <img src="data/pool-arrow-1.png" alt="arrow">
+                  </div>
+                </div>
+                <div class="decor-elem decor-elem-2">
+                  <div class="text">Ионизатор для бассейна<br>Aquatron Systems</div>
+                  <div class="arrow">
+                    <img src="data/pool-arrow-2.png" alt="arrow">
+                  </div>
+                </div>
+                <div class="decor-elem decor-elem-3">
+                  <div class="text">Чистая прозрачная вода.<br>Отсутствие неприятного<br>.запаха ощутимая мягкость воды</div>
+                  <div class="arrow">
+                    <img src="data/pool-arrow-3.png" alt="arrow">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-2">
+          <div class="container">
+            <div class="block-2__content">
+              <div class="block-2__col-1">
+                <div class="main-title">Выгоды при установки эко бассейна</div>
+                <div class="block-2__content-block">
+                  <div class="title">Для бизнеса</div>
+                  <div class="ico">
+                    <img src="data/business.png" alt="business">
+                  </div>
+                  <div class="main-text">Увеличение посещаемости<br>за счет уникальных бассейнов.</div>
+                  <div class="text">Ваши бассейны будут <strong>отличаться от 90%</strong> других, потому что он не содержит хлора</div>
+                </div>
+              </div>
+              <div class="block-2__col-2">
+                <div class="block-2__content-block">
+                  <div class="title">Для дома</div>
+                  <div class="ico">
+                    <img src="data/home.png" alt="business">
+                  </div>
+                  <div class="main-text">Сохраните свое здоровье и здоровье<br>своих близких за счет чистой воды<br>в бассейне без хлора.</div>
+                  <div class="text"><strong>Особенно важно — для детей.</strong><br>Дети часто пьют воду из бассейна.<br>Вода с ионами серебра и меди полностью экологична и <strong>отвечает стандартам</strong> питьевой воды.</div>
+                  <div class="subtext">Будьте спокойны за здоровье вашего ребенка.</div>
+                </div>
+              </div>
+              <div class="absolute-elem">aquatron systems</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% include 'footer.html' %}
+  </div>
+  {% include 'callback-popup.html' %}
+  <div class="overlay"></div>
 
   {% include 'js.html' %}
 </body>

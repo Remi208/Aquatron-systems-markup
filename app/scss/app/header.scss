@@ -1,0 +1,52 @@
+.header{
+    position: relative;
+    padding: 20px 0;
+    background: #efefef;
+    box-shadow: 0 0 20px #e0e0e0;
+    z-index: 1;
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo-buisiness{
+        display: flex;
+        align-items: center;
+    }
+    &__buisiness{
+        font-size: 18px;
+        line-height: 22px;
+        max-width: 235px;
+    }
+    &__contacts-menu{
+        display: flex;
+        align-items: center;
+        .phones-list{
+            margin-right: 25px;
+            &__item{
+              margin-bottom: 5px;
+              &:last-child{
+                  margin-bottom: 0;
+              }  
+            }
+            a{
+                font-size: 18px;
+            }
+        }
+    }
+}
+.logo{
+    position: relative;
+    width: 200px;
+    height: 45px;
+    margin-right: 75px;
+    &::after{
+        position: absolute;
+        content: '';
+        top: 5px;
+        bottom: 5px;
+        right: -37px;
+        width: 2px;
+        background: #2b89bf;
+    }
+}

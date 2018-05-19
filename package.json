@@ -87,6 +87,7 @@
   "dependencies": {
     "element-closest": "^2.0.2",
     "element.prototype.matches": "^0.1.1",
+    "jquery": "^3.3.1",
     "nodelist-foreach-polyfill": "^1.2.0"
   }
 }
