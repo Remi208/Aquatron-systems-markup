@@ -185,6 +185,8 @@ a{
     padding: 15px 65px;
 }
 .btn-order-consult{
+    appearance: none;
+    border: none;
     display: block;
     text-align: center;
     font-size: 24px;
@@ -491,6 +493,116 @@ a{
                     top: 0;
                     @extend %icon-phone;
                 }
+            }
+        }
+    }
+}
+.block-5{
+    padding: 70px 0;
+    background: url('../data/block-5-bg.jpg') center center no-repeat;
+    background-size: cover;
+    &__content{
+        max-width: 1005px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        padding: 40px 59px 40px 30px;
+    }
+    &__col-1{
+        min-width: 490px;
+        width: 490px;
+        margin-right: 65px;
+        border-right: 5px solid #479cc8;
+        .text{
+            font-size: 35px;
+            line-height: 44px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            padding-left: 30px;
+        }
+    }
+    &__col-2{
+        width: 100%;
+        .features-list{
+            &__feature{
+                display: flex;
+                align-items: center;
+                padding: 20px 0;
+                border-bottom: 1px solid #daebf4;
+                &:last-child{
+                    border-bottom: none;
+                }
+                .ico{
+                    min-width: 40px;
+                    width: 40px;
+                    text-align: center;
+                    margin-right: 15px;
+                }
+                .text{
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22px;
+                }
+                strong{
+                    color: #479cc8;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+.block-6{
+    padding: 90px 0 80px;
+    .main-title{
+        position: relative;
+        font-size: 39px;
+        line-height: 47px;
+        font-weight: 700;
+        padding-left: 120px;
+        margin-bottom: 55px;
+        &::after{
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            @extend %icon-title-wave;
+        }
+    }
+    &__content{
+        display: flex;
+        align-items: flex-start;
+        .row{
+            margin-bottom: 40px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .title{
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+    }
+    &__col{
+        width: 46%;
+    }
+    .radios-images{
+        display: flex;
+        .image{
+            position: relative;
+            margin-right: 10px;
+            &::after{
+                position: absolute;
+                content: '';
+                z-index: -1;
+                background: #fbfbfb;
+                left: -15px;
+                right: -15px;
+                top: -15px;
+                bottom: -15px;
+                border-radius: 20px;
             }
         }
     }
