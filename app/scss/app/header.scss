@@ -1,9 +1,12 @@
 .header{
-    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     padding: 20px 0;
     background: #efefef;
     box-shadow: 0 0 20px #e0e0e0;
-    z-index: 1;
+    z-index: 10;
     &__content{
         display: flex;
         align-items: center;
