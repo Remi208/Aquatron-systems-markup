@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     popup();
     menu();
+    slowAnchor();
 
     $('#map').each(function(){
         var map_ = $(this).attr('id');
@@ -117,4 +118,16 @@ function mapInitialize(map_) {
         map: map
     });
 
+}
+
+function slowAnchor(){
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+        $('.nav-icon').removeClass('open');
+        $(".main-nav").removeClass('active');
+    
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top - 85
+        }, 500);
+    });
 }

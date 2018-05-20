@@ -38,6 +38,51 @@
         }
     }
 }
+.main-nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 50%;
+    min-width: 320px;
+    background: #fff;
+    z-index: 11;
+    transition: .3s;
+    overflow-y: auto;
+    padding: 110px 100px;
+    &.active{
+        right: 0;
+    }
+    &__list{
+        font-size: 24px;
+        .item{
+            margin-bottom: 25px;
+        }
+        a{
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+            &::after{
+                position: absolute;
+                content: '';
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 2px;
+                background: #2b89bf;
+                transform: rotateY(90deg);
+                transition: .3s
+            }
+            @media (min-width: 1250px){
+                &:hover{
+                    &::after{
+                        transform: rotateY(0);
+                    }
+                }
+            }
+        }
+    }
+}
 .logo{
     position: relative;
     width: 200px;
