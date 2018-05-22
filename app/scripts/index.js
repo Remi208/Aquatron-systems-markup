@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     popup();
     menu();
     slowAnchor();
+    headerRebuild();
 
     $('#map').each(function(){
         var map_ = $(this).attr('id');
@@ -76,6 +77,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+window.addEventListener("resize", () => {
+    headerRebuild();
+});
+
+var appendFlag = 0;
+
+function headerRebuild(){
+    var text = $('.header__buisiness');
+    var phones = $('.header .phones-list');
+    var btn = $('.btn.btn-callback');
+    var logo = $('.header .logo');
+    var burger = $('.nav-icon');
+
+    var mainNav = $('.main-nav');
+    var header1 = $('.header__logo-buisiness');
+    var header2 = $('.header__contacts-menu');
+
+    if(window.innerWidth <= 1024 && appendFlag == 0){
+
+        // text.prependTo(mainNav);
+        phones.appendTo(mainNav);
+        btn.appendTo(mainNav);
+
+        appendFlag++;
+
+    } else if(window.innerWidth > 1024 && appendFlag == 1){
+
+        // text.appendTo(header1);
+        btn.prependTo(header2);
+        phones.prependTo(header2);
+
+        appendFlag--;
+
+    }
+}
 
 function popup() {
     $('.btn-callback').click( function(event){
@@ -142,6 +179,14 @@ function popup() {
                     $('.overlay').fadeOut(400);
                 }
             );
+        var vidPops = $('.video-popup');
+        for(var i = 0; i < vidPops.length; i++){
+            var thisPopVid = $(vidPops[i]).find('iframe');
+            
+            thisPopVid.clone().appendTo($(vidPops[i]).find('.content'));
+
+            $($(vidPops[i]).find('iframe')[0]).remove();
+        }
     });
 }
 
@@ -162,7 +207,12 @@ function mapInitialize(map_) {
     var iconBase = 'images/marker.png';
 
     var latlng = new google.maps.LatLng(latitude,longtitude);
-    var mapCoord = new google.maps.LatLng(latitude - 0.005,longtitude - 0.03)
+    if(window.innerWidth > 767){
+        var mapCoord = new google.maps.LatLng(latitude - 0.005,longtitude - 0.03);
+    } else {
+        var mapCoord = new google.maps.LatLng(latitude,longtitude);
+    }
+
 
     var myOptions = {
         center: mapCoord,
@@ -201,7 +251,7 @@ function slowAnchor(){
         $(".main-nav").removeClass('active');
     
         $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top - 175
+            scrollTop: $($.attr(this, 'href')).offset().top - 85
         }, 500);
     });
 }

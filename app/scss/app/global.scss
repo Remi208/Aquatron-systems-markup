@@ -17,13 +17,7 @@ a{
     overflow: hidden;
     padding-top: 85px;
     @include breakpoint(md){
-        padding-top: 149px;
-    }
-    @include breakpoint(sm){
-        padding-top: 181px;
-    }
-    @include breakpoint(xs){
-        padding-top: 175px;
+        padding-top: 66px;
     }
 }
 .container{
@@ -164,9 +158,6 @@ a{
     transition: .5s;
     cursor: pointer;
     z-index: 15;
-    @include breakpoint(sm){
-        margin-bottom: 20px;
-    }
 }
 .nav-icon span{
     display: block;
@@ -303,6 +294,7 @@ a{
     padding: 15px 65px;
     @include breakpoint(xs){
         padding: 15px 30px;
+        width: 100%;
     }
 }
 .btn-calc-price{
@@ -315,6 +307,7 @@ a{
     @include breakpoint(xs){
         padding: 15px 30px;
         font-size: 16px;
+        width: 100%;
     }
 }
 .btn-item-details{
@@ -322,6 +315,7 @@ a{
     padding: 15px 70px;
     @include breakpoint(xs){
         padding: 15px 30px;
+        width: 100%;
     }
 }
 .form-input{
@@ -352,7 +346,7 @@ a{
         padding: 40px 0 80px;
     }
     @include breakpoint(xs){
-        padding: 40px 0;
+        padding: 40px 0 60px;
     }
     &__content{
         position: relative;
@@ -376,12 +370,15 @@ a{
             margin: 0 auto;
         }
         @include breakpoint(xs){
-            display: none;
+            margin-top: 80px;
         }
         .main-image{
             max-width: 650px;
             @include breakpoint(lg){
                 max-width: 500px;
+            }
+            @include breakpoint(xs){
+                max-width: 290px;   
             }
         }
         .decor-elem{
@@ -393,6 +390,9 @@ a{
             }
             .arrow{
                 position: absolute;
+                @include breakpoint(xs){
+                    display: none;
+                }
             }
             &-1{
                 text-align: right;
@@ -401,6 +401,10 @@ a{
                 @include breakpoint(lg){
                     left: 90px;
                     bottom: -41px;
+                }
+                @include breakpoint(xs){
+                    left: 170px;
+                    bottom: 0;
                 }
                 .arrow{
                     left: -40px;
@@ -411,6 +415,11 @@ a{
                 text-align: right;
                 right: 215px;
                 bottom: 0;
+                @include breakpoint(xs){
+                    right: auto;
+                    left: -10px;
+                    bottom: -15px;
+                }
                 .arrow{
                     right: -120px;
                     bottom: 10px;
@@ -422,6 +431,9 @@ a{
                 @include breakpoint(lg){
                     top: -75px;
                     left: 120px;                
+                }
+                @include breakpoint(xs){
+                    top: -60px;
                 }
                 .arrow{
                     right: -50px;
@@ -645,7 +657,8 @@ a{
             border: none;
         }
         @include breakpoint(xs){
-            padding: 20px;
+            padding: 0;
+            margin: 0;
         }
         .text{
             font-size: 30px;
@@ -653,7 +666,7 @@ a{
             font-weight: 700;
             margin-bottom: 65px;
             @include breakpoint(sm){
-                padding: 15px 30px;
+                padding: 0;
                 margin-bottom: 0;
             }
             @include breakpoint(xs){
@@ -706,6 +719,7 @@ a{
         @include breakpoint(lg){
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
     }
     form{
@@ -717,10 +731,16 @@ a{
         bottom: -45px;
         text-align: left;
         @include breakpoint(lg){
-            display: none;
+            position: initial;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .decor-elem{
             position: absolute;
+            @include breakpoint(lg){
+                position: initial;
+            }
             .text{
                 font-size: 35px;
                 line-height: 42px;
@@ -737,6 +757,11 @@ a{
                     right: -210px;
                     bottom: -20px;
                 }
+            }
+        }
+        .main-image{
+            @include breakpoint(lg){
+                display: none;
             }
         }
         .decor-text{
@@ -1016,7 +1041,7 @@ a{
     background: #efefef;
     padding: 80px 0 200px;
     @include breakpoint(sm){
-        padding: 40px 0 80px;
+        padding: 40px 0;
     }
     &__content{
         position: relative;
@@ -1159,7 +1184,11 @@ a{
             z-index: 2;
             display: inline-block;
             @include breakpoint(lg){
-                display: none;
+                display: flex;
+                justify-content: center;
+            }
+            @include breakpoint(md){
+                display: block;
             }
         }
         .content{
@@ -1176,6 +1205,10 @@ a{
             }
             @include breakpoint(md){
                 padding: 20px 20px 70px;
+            }
+            @include breakpoint(sm){
+                padding: 0 0 80px;
+                border: none;
             }
         }
         .title{
@@ -1211,6 +1244,11 @@ a{
         @include breakpoint(lg){
             right: 30px;
             bottom: 10px;
+        }
+        @include breakpoint(md){
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .counter{
             position: relative;
@@ -1509,10 +1547,21 @@ a{
         bottom: -130px;
         text-align: left;
         @include breakpoint(lg){
-            display: none;
+            position: initial;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .main-image{
+            @include breakpoint(lg){
+                display: none;
+            }
         }
         .decor-elem{
             position: absolute;
+            @include breakpoint(lg){
+               position: initial;
+            }
             .text{
                 font-size: 30px;
                 line-height: 36px;
@@ -2151,24 +2200,15 @@ a{
         position: absolute;
         z-index: 1;
         top: 50%;
-        left: 50%;
-        width: 100%;
-        max-width: 1170px;
-        padding: 0 15px;
+        left: 35%;
         transform: translate(-50%, -50%);
+        min-width: 600px;
         @include breakpoint(sm){
             position: relative;
             top: auto;
             left: auto;
             transform: none;
-        }
-    }
-    .map-container{
-        position: relative;
-        display: inline-block;
-        @include breakpoint(xs){
-            display: block;
-            margin: 0 -15px;
+            min-width: 0;
         }
     }
     .image{
